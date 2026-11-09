@@ -10,35 +10,15 @@ MONTH_NAMES = [
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
 ]
 
-DRIVE_IDS = {
-    "manual": "13vnzltpGelUU8-kjBJNAsIpr1T_1W4KejKguA13-CBU",
-    "folder": "1Y6mZxoxTUsz_T5QI_Rs4Td39n5o4PsA9",
-    "2014": "1XS3R49YVmLzxk4axCmL-6r33eMfBKEL5FKqD5IaCXro",
-    "2015": "1BAc-pqBrZYLcBCR3U6mA8N6pfTmvuUDXWEuc5Whuavc",
-    "2016": "1xVQ_kHpG37sNhvRJ2vSoZ3TdOZW07vDGltwYsHKHNhM",
-    "2017": "1iLtuvyWpb1xbYLMB3TVYjRjd1whldNigwPPqgVTiRjY",
-    "2018": "1kT19yMvXrzxwD7QrLoomzafrdE8h8jJrhMnYfIkiVgc",
-    "2019": "1em3AblyGISuT_XFB0CbxVx3JI_odjl1oxhgUfnAIhQQ",
-    "2020": "1r9W2qpTkrWsR0C1rWbdke0ZJj1KMGpEn7TrjMdq2SQg",
-    "2021": "1egaOiby896ia-FVP7T7W33xBe7CxTd-AIpTFaJ6FRm0",
-    "2022": "1axAEkcfsJufm1G-I3hUmiTW1sWWhSNFThkJwIPiETHw",
-    "2023": "1qOwSkbD7x296h0EUcF_y2pjupZfD2ZU7vzbjIKiLdVU",
-    "2024": "1yJDGJUHxiYrFMM86cUyqo83kr3QWcEyBBlvEryoVofQ",
-    "2025": "1MELvgRIaPXpADStPZuWqA0dYwVU2DPmcgUaMkby6O8Q",
-}
-
 def md_to_html(md_text):
-    # Convert markdown links [text](url)
     s = re.sub(
         r"\[([^\]]+)\]\((https?://[^\s)]+)\)",
         r'<a href="\2" target="_blank" rel="noopener noreferrer" class="ef-link">\1</a>',
         md_text
     )
-    # Bold + Italic
     s = re.sub(r"\*\*\*([^*]+)\*\*\*", r"<strong><em>\1</em></strong>", s)
     s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"\*([^*\n]+)\*", r"<em>\1</em>", s)
-    # Bullet sub-items
     lines = s.split("\n")
     out_lines = []
     in_list = False
@@ -146,11 +126,8 @@ def main():
                 cur_entry["md_lines"].append(line)
 
         flush_entry(cur_entry)
-        drive_id = DRIVE_IDS.get(yr_str, "")
-        drive_url = f"https://docs.google.com/document/d/{drive_id}/edit" if drive_id else f"https://drive.google.com/drive/folders/{DRIVE_IDS['folder']}"
         years_summary.append({
             "year": yr,
-            "driveUrl": drive_url,
             "githubMdUrl": f"https://github.com/walterfr/DatasFatosCE/blob/main/docs/{yr}.md",
             "pageUrl": f"../{yr}/",
             "entryCount": yr_count
@@ -159,7 +136,6 @@ def main():
     payload = {
         "project": "Datas e Fatos para a História do Ceará",
         "repository": "https://github.com/walterfr/DatasFatosCE",
-        "driveFolderUrl": f"https://drive.google.com/drive/folders/{DRIVE_IDS['folder']}",
         "totalEntries": len(entries_flat),
         "totalYears": len(years_summary),
         "totalMonths": len(years_summary) * 12,

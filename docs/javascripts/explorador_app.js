@@ -186,8 +186,7 @@
     let html = '';
     groups.forEach(g => {
       const yObj = state.years.find(y => y.year === g.year);
-      const docUrl = yObj ? yObj.driveUrl : '#';
-      const pageUrl = yObj ? yObj.pageUrl : `../${g.year}/`;
+            const pageUrl = yObj ? yObj.pageUrl : `../${g.year}/`;
 
       html += `<div class="ef-month-block">
         <div class="ef-month-header">
@@ -198,7 +197,7 @@
           </div>
           <div style="display:flex;gap:0.75rem;font-size:0.78rem;">
             <a href="${pageUrl}">Página do Ano →</a>
-            <a href="${docUrl}" target="_blank" rel="noopener noreferrer">Google Doc ↗</a>
+            
           </div>
         </div>
         <div class="ef-month-items">`;
