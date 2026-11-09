@@ -1,0 +1,88 @@
+site_name: "Datas e Fatos para a História do Ceará (2014–2025)"
+site_description: "Cronologia histórica e memorialística do Estado do Ceará em continuidade à série de M. A. Azevedo (Nirez) na Revista do Instituto do Ceará."
+site_author: "Walter / Projeto Datas e Fatos para a História do Ceará"
+site_url: "https://walterfr.github.io/DatasFatosCE/"
+repo_url: "https://github.com/walterfr/DatasFatosCE"
+repo_name: "walterfr/DatasFatosCE"
+edit_uri: "edit/main/docs/"
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.keys
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+      title: "Meses e Seções"
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
+  - javascripts/acervo_data.js
+  - javascripts/explorador_app.js
+
+nav:
+  - Início: index.md
+  - Explorador & Filtros: explorador.md
+  - Manual Metodológico: MANUAL_DE_PROCEDIMENTOS_E_PADRAO_EDITORIAL.md
+  - Volumes Anuais (2014–2025):
+      - "2014": 2014.md
+      - "2015": 2015.md
+      - "2016": 2016.md
+      - "2017": 2017.md
+      - "2018": 2018.md
+      - "2019": 2019.md
+      - "2020": 2020.md
+      - "2021": 2021.md
+      - "2022": 2022.md
+      - "2023": 2023.md
+      - "2024": 2024.md
+      - "2025": 2025.md
