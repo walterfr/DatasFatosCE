@@ -1,0 +1,280 @@
+/* Estilos Editoriais & Explorador Interativo (compatível com modo claro e escuro do MkDocs Material) */
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.md-typeset p {
+  line-height: 1.68;
+}
+.ef-wrapper {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+.ef-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(180, 83, 9, 0.25);
+  padding-bottom: 0.5rem;
+}
+.ef-subtab {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid rgba(120, 113, 108, 0.3);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  transition: all 0.15s ease;
+}
+.ef-subtab.active {
+  background: #b45309;
+  color: #ffffff;
+  border-color: #b45309;
+}
+.ef-card {
+  background: var(--md-code-bg-color);
+  border: 1px solid rgba(120, 113, 108, 0.25);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+}
+.ef-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+}
+.ef-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.ef-pill {
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid rgba(120, 113, 108, 0.3);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.ef-pill.active {
+  background: #92400e;
+  color: #fff;
+  border-color: #92400e;
+}
+.ef-grid-controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+@media (min-width: 768px) {
+  .ef-grid-controls {
+    grid-template-columns: 2fr 1.2fr auto;
+    align-items: center;
+  }
+}
+.ef-search-box input, .ef-select-box select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(120, 113, 108, 0.4);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+}
+.ef-action-box {
+  display: flex;
+  gap: 0.4rem;
+}
+.ef-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.ef-btn-primary {
+  background: #b45309;
+  color: #fff;
+}
+.ef-btn-outline {
+  border-color: rgba(120, 113, 108, 0.4);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.ef-status-bar {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(120, 113, 108, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+.ef-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+.ef-month-block {
+  border: 1px solid rgba(120, 113, 108, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: var(--md-default-bg-color);
+}
+.ef-month-header {
+  background: var(--md-code-bg-color);
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(120, 113, 108, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ef-year-badge {
+  background: #92400e;
+  color: #fff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.76rem;
+  margin-right: 0.4rem;
+}
+.ef-entry-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(120, 113, 108, 0.14);
+}
+@media (min-width: 640px) {
+  .ef-entry-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.ef-entry-day {
+  min-width: 82px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #b45309;
+  padding-top: 0.1rem;
+}
+.ef-entry-content {
+  flex: 1;
+  min-width: 0;
+}
+.ef-entry-text {
+  line-height: 1.65;
+}
+.ef-entry-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.ef-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.ef-tag {
+  font-size: 0.68rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(180, 83, 9, 0.3);
+  background: rgba(180, 83, 9, 0.08);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+}
+.ef-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+.ef-mini-btn {
+  font-size: 0.72rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(120, 113, 108, 0.3);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+}
+.ef-mini-btn.saved {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+  font-weight: 600;
+}
+.ef-mark {
+  background: #fde68a;
+  color: #78350f;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+.ef-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.ef-kpi-card {
+  background: var(--md-code-bg-color);
+  border: 1px solid rgba(120, 113, 108, 0.25);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+.ef-kpi-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.7;
+}
+.ef-kpi-value {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #b45309;
+  margin: 0.2rem 0;
+}
+.ef-kpi-sub {
+  font-size: 0.74rem;
+  opacity: 0.75;
+}
+.ef-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .ef-charts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ef-toast {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: #1c1917;
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  font-size: 0.8rem;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
