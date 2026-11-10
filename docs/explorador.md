@@ -7,12 +7,12 @@ hide:
 
 # Explorador Interativo, Filtros Temáticos & Fichário (2014–2025)
 
-Filtre simultaneamente os **896 verbetes** dos 12 volumes por **Eixo Temático** (Necrologia, Esportes, Legislação e Toponímia, Política e Instituições, Cultura/Educação/Religião, Infraestrutura/Saúde), **Ano**, **Mês** ou **Palavra-chave**, visualize os gráficos da coleção e monte seu **Fichário de Pesquisa** para exportação em Markdown.
+Filtre simultaneamente os **901 verbetes** dos 12 volumes por **Eixo Temático** (Necrologia, Esportes, Legislação e Toponímia, Política e Instituições, Cultura/Educação/Religião, Infraestrutura/Saúde), **Ano**, **Mês** ou **Palavra-chave**, visualize os gráficos da coleção e monte seu **Fichário de Pesquisa** para exportação em Markdown.
 
 <div id="ef-app-root" class="ef-wrapper">
   <div class="ef-subtabs">
     <button type="button" id="ef-tab-busca" class="ef-subtab active" onclick="window.efSwitchSubtab('busca')">
-      Filtro Cruzado de Verbetes (896)
+      Filtro Cruzado de Verbetes (901)
     </button>
     <button type="button" id="ef-tab-graficos" class="ef-subtab" onclick="window.efSwitchSubtab('graficos')">
       Painel Quantitativo &amp; Gráficos
@@ -67,7 +67,7 @@ Filtre simultaneamente os **896 verbetes** dos 12 volumes por **Eixo Temático**
     <div class="ef-kpi-grid">
       <div class="ef-kpi-card">
         <div class="ef-kpi-title">Total de Efemérides</div>
-        <div class="ef-kpi-value" id="ef-kpi-total">896</div>
+        <div class="ef-kpi-value" id="ef-kpi-total">901</div>
         <div class="ef-kpi-sub">Padrão M. A. Azevedo (Nirez)</div>
       </div>
       <div class="ef-kpi-card">
